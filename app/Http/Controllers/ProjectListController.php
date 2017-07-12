@@ -39,7 +39,7 @@ class ProjectListController extends Controller
     public function insert(Request $request){
         //validate post data
         $this->validate($request, [
-            'name' => 'bail|required|unique:projectlist'
+            'name' => 'bail|required|unique:projectList'
         ]);
         
         //get post data
@@ -69,7 +69,7 @@ class ProjectListController extends Controller
     public function update($id, Request $request){
         //validate post data
         $this->validate($request, [
-            'name' => 'bail|required|unique:projectlist'.($id ? ",id,$id" : '')
+            'name' => 'bail|required|unique:projectList'.($id ? ",id,$id" : '')
         ]);
         
         //get post data
