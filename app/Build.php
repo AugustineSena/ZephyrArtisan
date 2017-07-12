@@ -8,7 +8,7 @@ use App\Project;
 class Build extends Model
 {
     //
-    protected $table  = "buildlist";
+    protected $table  = "buildList";
     protected $fillable = ['idproject','type','version','note','link_file_APK'];
 
      //custom timestamps name

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MasterUser extends Model
 {
-    protected $table = "masteruser";
+    protected $table = "masterUser";
     
     protected $fillable = [
     'name', 'email', 'type', 'password',

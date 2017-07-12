@@ -14,9 +14,9 @@ class ProjectListController extends Controller
         //fetch all posts data
         $id = auth()->user()->id;
 
-        $projectlists = Project::join('userlist','idproject','=','projectlist.id')
+        $projectlists = Project::join('userList','idproject','=','projectList.id')
                         ->where('iduser',$id)
-                        ->orderBy('projectlist.created_at','desc')
+                        ->orderBy('projectList.created_at','desc')
                         ->get();
         //dd($projectlists);
         //pass posts data to view and load list view

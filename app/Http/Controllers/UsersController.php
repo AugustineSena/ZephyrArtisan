@@ -15,7 +15,7 @@ class UsersController extends Controller
         // if(restrict($iduser, $id) == false){
         //     return redirect()->route('home');
         // }
-        $userlists = User::join('userlist','users.id','=','iduser')
+        $userlists = User::join('userList','users.id','=','iduser')
                     ->where('idproject',$id)
                     ->get();
         //dd($userlists);

@@ -1,6 +1,6 @@
 <?php 
 	function restrict($iduser, $idproject){
-		$result = \DB::table('userlist')->where('iduser',$iduser)->where('idproject',$idproject)->count();
+		$result = \DB::table('userList')->where('iduser',$iduser)->where('idproject',$idproject)->count();
 		if($result > 0){
 			return true;
 		}
@@ -8,7 +8,7 @@
 	}
 
 	function restInPiece($iduser){
-		$result = \DB::table('userlist')->where('id',$iduser)->count();
+		$result = \DB::table('userList')->where('id',$iduser)->count();
 		if($result > 0){
 			return true;
 		}
